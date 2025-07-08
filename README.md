@@ -1,3 +1,10 @@
+# To run UI
+The UI was done using Inertia with Vue.js so you need to run the `php artisan serve` and also `npm run dev`
+
+The last step on test that you return a Laravel default `view` so it needs to change to use Inertia's Testing methods. The workaround was to check if there was a running test and serve a default view for tests and the Inertia one as default.
+
+----------------------
+
 Objective:
 
 Back-end Assessment: [ ] Make all tests pass, applying the best practices of Laravel and SOLID and clean arch
