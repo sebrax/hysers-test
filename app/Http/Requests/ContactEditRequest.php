@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ContactsRequest extends FormRequest
+class ContactEditRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -14,7 +14,9 @@ class ContactsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|min:3|max:255',
+            'email' => 'email|max:255|unique:contacts,email',
+            'phone' => 'nullable|string|min:10|max:22',
         ];
     }
 }
